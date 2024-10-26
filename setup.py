@@ -15,13 +15,6 @@ if mo:
 else:
     raise RuntimeError(f"Unable to find version string in {VERSIONFILE}.")
 
-
-major_version, minor_version = sys.version_info[:2]
-if not (major_version == 3 and 7 <= minor_version <= 13):
-    sys.stderr.write("Sorry, only Python 3.7 - 3.13 are "
-                     "supported at this time.\n")
-    exit(1)
-
 setup(
     name="geojson",
     version=verstr,
